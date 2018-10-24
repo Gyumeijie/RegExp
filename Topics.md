@@ -41,3 +41,23 @@ The quantifiers ( `* + {}`) are **greedy** operators, so they expand the match a
 
 The aforementioned quantifiers may, however, be made **lazy** or minimal or reluctant, `matching as few characters as possible`, by appending a question mark(`?`).
 
+
+## Advanced topics
+
+### Boundaries — \b and \B
+
+### Back-references — \n
+> Only works when we use `()` or `(?<name>)`, for it need capturing matched characters.
+
+### Look-ahead and Look-behind — (?=) and (?<=)
+
+```
+d(?=r)       matches a d only if is followed by r
+(?<=r)d      matches a d only if is preceded by an r
+
+// negation
+d(?!r)       matches a d only if is not followed by r
+(?<!r)d      matches a d only if is not preceded by an r
+```
+
+> Note: `r` will not be part of the overall regex match. :star:
