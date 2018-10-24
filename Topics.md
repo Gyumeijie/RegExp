@@ -21,3 +21,23 @@ a[bc]      same as previous
 .   matches any character
 ```
 > They are all match ***a single character***. :star: :star:
+
+## Intermediate topics
+
+### Grouping and capturing — ()
+
+```
+// Grouping with capturing
+a(bc)           parentheses create a capturing group with value bc
+a(?<foo>bc)     using ?<foo> we put a name to the group
+
+// Grouping without capturing
+a(?:bc)*        using ?: we disable the capturing group
+```
+
+### Greedy and Lazy match
+
+The quantifiers ( `* + {}`) are **greedy** operators, so they expand the match as far as they can through the provided text.
+
+The aforementioned quantifiers may, however, be made **lazy** or minimal or reluctant, `matching as few characters as possible`, by appending a question mark(`?`).
+
